@@ -31,12 +31,12 @@ find_package(Git QUIET)
 if (NOT DIFF STREQUAL "DIFF-NOTFOUND")
     message(STATUS "Check output uses diff: ${DIFF}")
     add_custom_target(check 
-        COMMAND $<TARGET_FILE:rainfall> < ${CMAKE_SOURCE_DIR}/demo.csv | ${DIFF} ${CMAKE_SOURCE_DIR}/demo.txt -
+        COMMAND $<TARGET_FILE:Random-Number-Generator> < ${CMAKE_SOURCE_DIR}/demo.csv | ${DIFF} ${CMAKE_SOURCE_DIR}/
     )
 elseif(GIT_FOUND)
     message(STATUS "Check output uses git diff: ${GIT}")
     add_custom_target(check 
-        COMMAND $<TARGET_FILE:rainfall> < ${CMAKE_SOURCE_DIR}/demo.csv | ${GIT_EXECUTABLE} diff --no-index ${CMAKE_SOURCE_DIR}/demo.txt -
+        COMMAND $<TARGET_FILE:Random-Number-Generator> < ${CMAKE_SOURCE_DIR} | ${GIT_EXECUTABLE} diff --no-index ${CMAKE_SOURCE_DIR}/
     )
 else()
     message(STATUS "Check output is not implemented due to missing diff utilities")
