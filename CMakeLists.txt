@@ -1,6 +1,6 @@
 # @file CMakeLists.txt
 # 
-# CMake files for the rainfall program
+# CMake files for the Random Number Generator program
 
 cmake_minimum_required(VERSION 3.25)
 
