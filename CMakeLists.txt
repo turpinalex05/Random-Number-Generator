@@ -23,7 +23,7 @@ endif()
 add_executable(Random-Number-Generator main.cpp)
 
 # run command
-add_custom_target(run $<TARGET_FILE:rainfall> < ${CMAKE_SOURCE_DIR}/demo.csv)
+add_custom_target(run $<TARGET_FILE:Random-Number-Generator> < ${CMAKE_SOURCE_DIR})
 
 # check command - use diff to check output
 find_program(DIFF diff)
